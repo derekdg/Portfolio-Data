@@ -1,0 +1,130 @@
+
+.styleTable TH { 
+    border-bottom: 2px solid #31B94D;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+    table-layout: fixed;
+    text-align: center;
+    width: 85px;
+}
+
+.styleTable TD { 
+    border-bottom: 1px solid #31B94D;
+    font-family: Helvetica;
+    font-size: 14px;
+    height: 25px;
+    table-layout: fixed;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+	font-family: Helvetica;
+	font-size: 12px;
+}
+
+/* Derek: Added margin-right to the delivered: */
+.ui-li-aside { float: right; width: 35%; text-align: right; margin: .3em 0; margin-right: 15px;  }
+
+
+.dd-align-right {
+	float: right;
+	padding-right: 5px;
+}
+
+.dd-pg-title {
+	color: #000000;
+	font-weight: normal;
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
+.dd-pg-subtitle {
+	color: #000000;
+	font-weight: normal;
+	font-family: Helvetica;
+	font-size: 18px;
+}
+
+.dd-pos-sym {
+	color: #000000;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: Helvetica;
+}
+.dd-pos-name {
+	color: #A1A1A1;
+	font-weight: bold;
+	font-family: Helvetica;
+	font-size: 14px;
+}
+.dd-per-gain {
+	color: #70AE3B;
+	font-weight: bold;
+	font-family: Helvetica;
+}
+.dd-per-loss {
+	color: #f31900;
+	font-weight: bold;
+	font-family: Helvetica;
+}
+
+.dd-detail-label {
+	font-size: 12px;
+	font-weight:bold;
+	padding-right: 2px;
+	font-family: Helvetica;
+}
+.dd-detail-data {
+	font-weight: normal;
+	padding-right: 8px;
+	font-size: 12px;
+	font-family: Helvetica;
+}
+.dd-detail-missing {
+	font-weight: normal;
+	padding-right: 8px;
+	font-size: 12px;
+	color: #f31900;
+	font-family: Helvetica;
+}
+
+.dd-last-label {
+	color: #000;
+	font-weight: bold;
+	font-family: Helvetica;
+	font-size: 14px;
+	padding-right: 2px;
+}
+.dd-last-data {
+	color: #000;
+	font-weight: normal;
+	font-family: Helvetica;
+	font-size: 14px;
+}
+
+#myPortfoliosList p {
+	margin-top: 2px;
+}
+#myPortfoliosList label {
+	margin-right: 5px;
+}
+
+#myPositionsList p {
+	margin-top: 2px;
+}
+#myPositionsList label {
+	margin-right: 5px;
+}
+
+#myTransactionList p {
+	margin-top: 2px;
+}
+
+#myTransactionList label {
+	margin-right: 5px;
+}

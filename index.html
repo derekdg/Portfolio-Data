@@ -1,0 +1,166 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>My Portfolios</title>
+
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="css/images/magritte.ico" />
+	
+	<link rel="stylesheet" href="css/jquery.mobile-1.1.0-rc.1.css?n=1" />
+	<link rel="stylesheet" href="css/myport.css?n=1" />
+
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAACw5LZkz0ync75JqwCu8PsRQYbxCS0EBjoW1BgideJAKH4W6lPBQGfbuHgqGepkhaXIj3tgRHH8lwzQ"></script>
+	<script type="text/javascript" src="js/objMyPort.js?n=1"></script>
+
+	<script type="text/javascript">
+
+	google.load("gdata", "1.x");
+	
+	$(function() {
+
+		objMyPort.init();
+
+		if (typeof(sessionStorage) =='undefined') {
+			alert('Local storage not supported by this browser.');
+		}
+
+	}); //END: document.ready
+
+</script>
+
+	<script type="text/javascript" src="js/jquery.mobile-1.1.0-rc.1.min.js"></script>
+	</head>
+
+	<body>
+
+	<!-- -------------- -->
+	<!-- PORTFOLIO LIST -->
+	<!-- -------------- -->
+	<div data-role="page" id="home" data-theme="g">
+
+		<div data-role="header" data-theme="g">
+			<h1>Portfolios</h1>
+			<a href="#about" data-rel="dialog" data-transition="pop" data-role="button" data-icon="info" class="ui-btn-right" data-iconpos="notext">About</a>
+		</div>
+
+		<div data-role="content">
+			
+			<label id="posTitle" class="dd-pg-title">My Google Portfolios</label><br />
+		
+			<div id="loginpanel" class="content-primary">
+				<a href="#" id="login" data-inline="true" data-role="button">Login</a>
+			</div>
+
+			<div id="portpanel" class="content-secondary" style="display:none;">
+				<ul data-role="listview" data-inset="true" id="myPortfoliosList" data-theme="d"></ul>
+		
+			</div>		
+
+			<img src="img/me_eat.jpg" style="width:1px;height:1px;" />
+		</div>
+
+	</div>
+
+
+	<!-- -------------- -->
+	<!-- POSITIONS LIST -->
+	<!-- -------------- -->
+	<div data-role="page" id="detail" data-add-back-btn="true" data-theme="g">
+
+		<div data-role="header" data-theme="g">
+			<a href="#home" data-role="button" data-icon="arrow-l" class="ui-btn-left" data-iconpos="notext">Back</a>
+			<h1>Positions</h1>
+			<a href="#about" data-rel="dialog" data-transition="pop" data-role="button" data-icon="info" class="ui-btn-right" data-iconpos="notext">About</a>
+		</div>
+		
+		<div data-role="content">
+			<label id="posTitle" class="dd-pg-title"></label><br />
+			<ul data-role="listview" data-inset="true" data-theme="d" id="myPositionsList"></ul>
+		</div>
+		
+	</div>
+	
+	
+	<!-- ----------------- -->
+	<!-- TRANSACTIONS LIST -->
+	<!-- ----------------- -->
+	<div data-role="page" id="trans" data-theme="g">
+
+		<div data-role="header" data-theme="g">
+			<a href="#detail" data-role="button" data-icon="arrow-l" class="ui-btn-left" data-iconpos="notext">Back</a>
+			<h1>Transactions</h1>
+			<a href="#about" data-rel="dialog" data-transition="pop" data-role="button" data-icon="info" class="ui-btn-right" data-iconpos="notext">About</a>
+		</div>
+		
+		<div data-role="content">
+			<label id="transTitle" class="dd-pg-title"></label>
+			<ul data-role="listview" data-inset="true" data-theme="d" id="myTransactionList"></ul>
+			<p><a href="#stats" id="keyStats" data-theme="g" data-icon="info" data-rel="dialog" data-transition="pop" data-role="button" data-inline="true" class="dd-align-right">Key Statistics</a></p>
+		</div>
+		
+	</div>
+
+
+	<!-- ------------------- -->
+	<!-- KEY STATISTICS page -->
+	<!-- ------------------- -->
+	<div data-role="page" id="stats" data-theme="g">
+
+		<div data-role="header" data-theme="g"><h1>Key Statistics</h1></div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-divider-theme="g" data-theme="d" id="myKeyStatsList"></ul>
+			<a href="#trans" style="align:center;" data-role="button" data-rel="back" data-theme="g" data-inline="true" class="dd-align-right">Close</a>
+		</div>
+		
+		<div data-role="footer" class="ui-bar" data-theme="f"></div>
+
+	</div>	
+
+
+	<!-- ---------- -->
+	<!-- ABOUT page -->
+	<!-- ---------- -->
+	<div data-role="page" id="about" data-theme="g">
+
+		<div data-role="header" data-theme="g"><h1>About Site</h1></div>
+
+		<div data-role="content">
+
+			<div data-role="collapsible-set"> 
+			<div data-role="collapsible" data-collapsed="false"> 
+				<h3>Web Site Overview</h3> 
+				<p>This mobile site is a proof-of-concept, playground, etc. for accessing the <a href="http://code.google.com/apis/finance/" target="foo">Google Finance API</a>. After user authentication, the page flow is as follows:
+					<ol>
+						<li>Home page lists the user's Google Finance portfolios</li>
+						<li>Next page lists the selected portfolio's positions</li>
+						<li>Final page lists the selected position's transactions</li>
+					</ol>	
+					
+				</p> 
+			</div> 
+
+			<div data-role="collapsible" data-collapsed="true" data-theme="g"> 
+				<h3>Technology</h3> 
+				<p>
+					<ol>
+							<li>Framework: <a href="http://jquerymobile.com/" target="foo">jQuery Mobile</a> (1.1.0 RC 1)</li>
+							<li>Authentication: Uses the Google <a href="http://code.google.com/apis/accounts/docs/AuthSub.html" target="foo">AuthSub</a> authorization process</li>
+							<li>Stock Quotes: Uses <a href="http://developer.yahoo.com/yql/" target="foo">Yahoo! Query Language (YQL)</a> to get the last trade information on the positions</li>
+					</ol>
+				</p> 
+			</div> 
+		</div>
+		<a href="#trans" data-role="button" data-rel="back" data-theme="g" data-inline="true" class="dd-align-right">Close</a>
+		</div>
+
+		<div data-role="footer" class="ui-bar" data-theme="g"></div>
+
+	</div>
+
+	</body>
+
+	</html>
