@@ -13,3 +13,8 @@ Technology
 Framework: jQuery Mobile 1.1.0 RC 1
 Authentication: Uses the Google AuthSub authorization process
 Stock Data: Uses Yahoo! Query Language (YQL) to get the last trade information on the positions
+
+
+Disclaimer!
+
+This project is very much a work in progress. It is not near complete as far as code quality/testability/etc. It was meant to try out the Google Finance API (Deprecated).
