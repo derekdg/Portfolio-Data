@@ -1,0 +1,23 @@
+Portfolio-Data
+================
+
+Web Site Overview
+--------------------
+
+This mobile site is a proof-of-concept, playground, etc. for accessing the Google Finance API. After user authentication, the page flow is as follows:
+1. Home page lists the user's Google Finance portfolios
+2. Next page lists the selected portfolio's positions
+3. Final page lists the selected position's transactions
+
+Technology
+--------------------
+
+Framework: jQuery Mobile 1.1.0
+Authentication: Uses the Google AuthSub authorization process
+Stock Data: Uses Yahoo! Query Language (YQL) to get the last trade information on the positions
+
+
+Disclaimer!
+--------------------
+
+This project is very much a work in progress. It is not near complete as far as code quality/testability/etc. It was meant to try out the Google Finance API (Deprecated).
